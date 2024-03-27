@@ -13,7 +13,7 @@
         }
 
         header {
-            background-color: red;
+            background-color: #2980b9;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -39,6 +39,8 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            /*Alterei o texto todo da navbar para letras maiúsculas*/
+            text-transform: uppercase;
         }
 
         main {
@@ -60,9 +62,26 @@
             line-height: 1.6;
         }
 
+        .projetos{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 2rem;
+        }
+
+        .projeto{
+            background-color: #333;
+            padding: 1rem;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .projeto:hover{
+            scale: 110%;
+        }
 
         footer {
-            background-color: red;
+            background-color: #2980b9;
             color: #fff;
             text-align: center;
             padding: 30px;
@@ -78,16 +97,27 @@
             display: flex;
             flex-direction: column;
         }
+
+        footer #icon1 {
+            height: 28px;
+            width: 28px;
+        }
+        footer #icon2 {
+            height: 32px;
+            width: 32px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="imagens/logo.png" alt="Logo Social Connect"/>
+        <img src="imagens/logo-social-connect.png" alt="Logo Social Connect"/>
         <nav>
             <ul>
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Sobre nós</a></li>
                 <li><a href="#">Contato</a></li>
+                <!-- Adicionei o link para a parte de projetos -->
+                <li><a href="#">Projeto</a></li>
             </ul>
         </nav>
     </header>
@@ -98,16 +128,40 @@
             <p>Nosso site oferece carros com a cara de cada cliente.</p>
         </section>
         <section>
+            <h2>Nosso Projetos</h2>
+            <p>A Social Connect crirou projetos com outras empresas como:</p>
+            <div class="projetos">
+                <div class="projeto">
+                    <img class="img__projetos" src="https://picsum.photos/200" alt="primeiro projeto da empresa">
+                    <p class="descricao__projetos">Primeiro projeto</p>
+                </div>
+                <div class="projeto">
+                    <img class="img__projetos" src="https://picsum.photos/200" alt="segundo projeto da empresa">
+                    <p class="descricao__projetos">Segundo projeto</p>
+                </div>
+                <div class="projeto">
+                    <img class="img__projetos" src="https://picsum.photos/200" alt="segundo projeto da empresa">
+                    <p class="descricao__projetos">Terceiro projeto</p>
+                </div>
+            </div>
+        </section>
+        <section>
             <h2>Nossa Equipe</h2>
             <p>A equipe da Social Connect é uma ótima equipe, sempre trazendo o melhor para o cliente!.</p>
             <h2>Conheça o time</h2>
             <img src="imagens/team_git.png" alt="Nossa Equipe">
         </section>
         <section>
-            <h2>Aqui deve conter uma seção de Contato</h2>
-            <p>xxxxxxxxxx</p>
-            <p>xxxxxxxxxx</p>
-            <p>xxxxxxxxxxx</p>
+            <h2>Entre em contato</h2>
+            <p>Whatsapp: 11 99999-9999</p>
+            <p>Email: contato@socialconnect.com.br</p>
+            <p>Horário de atendimento: 09:00h às 18:00h</p>
+        </section>
+        <!-- Adicionei uma nova seção -->
+        <section>
+            <h2>Nova seção</h2>
+            <!-- Adicionei texto-->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt blanditiis animi soluta laboriosam unde nostrum consectetur, quaerat culpa assumenda facere obcaecati quo! Neque at nobis corporis ipsam hic placeat?</p>
         </section>
     </main>
     <footer>
@@ -115,8 +169,11 @@
         <p>&copy; 2021 Soia Cnnt. Tds s dritos rsedos.</p>
         </section>
         <section id="socialmedia">
-            <span>xxxxx</span>
-            <span>xxxxxx</span>
+            <span>@socialconnect</span>
+            <span>
+                <img id="icon1" src="./imagens/linkedin .png" alt="">
+                <img id="icon2" src="./imagens/instagram.png" alt="">
+            </span>
         </section>
     </footer>
 </body>
